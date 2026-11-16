@@ -76,29 +76,7 @@
 
 <h3>X</h3>
 <a class="twitter-timeline" data-width="400" data-height="600" href="https://x.com/_cdwm_?ref_src=twsrc%5Etfw">Posts by _cdwm_</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // アニメーションを適用したいHTMLタグを指定
-  const targets = document.querySelectorAll("h1, h2, h3, p, img, li, section, article");
-
-  targets.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(24px)";
-    el.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  targets.forEach((el) => observer.observe(el));
-});
-</script>
+<script src="animation.js"></script>
+</body>
 </body>
 </html>
